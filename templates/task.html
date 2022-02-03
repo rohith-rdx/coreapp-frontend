@@ -1,0 +1,108 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!--<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="/static/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Hello, world!</title>-->
+<style>
+#box2{
+  padding: 1% 3% 1% 3%;
+  /* background-color: white; */
+  border-radius: 14px;
+  float: right;
+  margin-top: 9%;
+  margin-left: 1%;
+  margin-right: 7%; 
+  width: 100%;
+}
+#box2 img{
+  float: left;
+  margin-right: 83px;
+}
+#box2 h5{
+    float: left;
+  margin-right: 40px;
+}
+h5{
+  font-weight: 400;
+  margin-top: 10px;
+  color: #fafafa;
+}
+h5 span{
+  font-weight: 400;
+  margin-top: 10px;
+  color: #15A7A7;
+}
+#hiddendiv{
+  height: auto;
+  width: 90%;
+  float: right;
+  padding: 1%;
+
+}
+#box2 img{
+  margin-top: 15px;
+}
+
+  </style>
+      </head>
+<body>
+<!--<div  id="nav" class="container-fluid">
+        <a class="one" id="infox"><b>iNFOX</b></a>
+        <a class="two" id="core"><b>Core</b></a>
+        <a class="three" id=""></a>
+          
+    
+        <span class="four">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/media/ROHITH._KPhoto._pdf_1.pdf" class="rounded-circle"  width="50" height="50" id="img2"></span><a href="logout" style="padding-right: 1%;padding-top: 1%;color: white">LOGOUT</a>
+
+</div>
+<div class="sidenav">
+  <a href="dr" class="col" id="sidebox1">MY PROFILE</a>
+  <a href="drtopics" class="col" id="sidebox1">TOPICS</a>
+  <a href="drweeklytask" class="col" id="sidebox1">WEEKLY TASKS</a>
+  <a href="drprojects" class="col" id="sidebox1">PROJECTS</a>
+  <a href="drattendance" class="col" id="sidebox1">ATTENDANCE</a>
+  <a href="drreportissues" class="col" id="sidebox1">REPORTED ISSUES</a>
+  <a href="drpayments" class="col" id="sidebox1">PAYMENTS</a>
+  <a href="drapplyleave" class="col" id="sidebox1">APPLY LEAVE</a>
+</div>-->
+    <div><label id="myprofile">ASSIGNED TASKS</label>
+<div id="hiddendiv">
+
+ 
+    <div id="box2" class="shadow ">
+    <a href="/assigned/">
+    <img src="/static/circle.png" width="20" height="20" style="margin-left: -25px">
+    <h5 style="width: 180px;margin-left: -56px" >test</h5>
+    <h5 style="width: 100px;margin-left:0px "><span>name</span></h5>
+    <h5 style="width: 125px;margin-left: -20px">Jan. 11, 2022</h5>
+    <h5 style="width: 100px"><span>Assigned by</span></h5><h5>MANAGER</h5>
+    <h5 style="width: 100px;margin-left: -20px">MANAGER</h5>
+    </a>
+    </div>
+    <div id="box2" class="shadow " style="margin-top: 1%;">
+        <a href="/submitted/">
+        <img src="/static/circle.png" width="20" height="20" style="margin-left: -25px">
+        <h5 style="width: 180px;margin-left: -56px" >test</h5>
+        <h5 style="width: 100px;margin-left:0px "><span>name</span></h5>
+        <h5 style="width: 125px;margin-left: -20px">Jan. 11, 2022</h5>
+        <h5 style="width: 100px"><span>Assigned by</span></h5><h5>MANAGER</h5>
+        <h5 style="width: 100px;margin-left: -20px">MANAGER</h5>
+        </a>
+        </div>
+
+</div>
+</div>
+</div>
+</body>
+{% endblock %}
+</html>
