@@ -1,82 +1,78 @@
-{% extends 'index.html'%}
-{% load static %}
-{% block content %}
-<style>
-#box2{
-  padding: 1% 5% 1% 5%;
-  background-color: white;
-  border-radius: 14px;
-  float: left;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-right: 9%;
-  width: 95%;
-}
-#box2 img{
-  float: left;
-  margin-right: 83px;
-}
-#box2 h5{
-    float: left;
-  margin-right: 40px;
-}
-h5{
-  font-weight: 400;
-  margin-top: 10px;
-  color: #616767;
-}
-h5 span{
-  font-weight: 400;
-  margin-top: 10px;
-  color: #15A7A7;
-}
-#hiddendiv{
-  height: auto;
-  width: 75%;
-  float: right;
-
-}
-#box2 img{
-  margin-top: 15px;
-}
-
-  </style>
+{%extends 'index.html'%}
+{%load static%}
+{%block content%}
 
 
-   <div class="container">
-      <div>
-        <label>TASK</label><label style="color: #ffffff;width: 500px;">{{ hrassignedtasks.task}}</label>
-      </div>
-      <div>
-        <label>SUBMISSION DATE</label><label style="color: #ffffff;width: 500px;">{{ hrassignedtasks.date}}</label>
-      </div>
-      <div>
-        <label>DUE DATE</label><label style="color: #ffffff;width: 500px;">{{ hrassignedtasks.duedate}}</label>
-      </div>
-        <form action="tltask2add" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-              <div>
-        <label>SCREENSHORT</label><br>
-                                  <input style="padding-left: 1cm" required name="screenshot" type="file" multiple accept="image/*" class="form-control-file">
-      </div><br><br><br><br>
-    <div class="preview">
-        <img id="file-ip-1-preview" typeof="hidden" style="width: 200px;height: 150px">
+<div class="row pt-5" style="background-color: black;">
+    <div class="mt-2 ml-5 text-light" style="font-size: 20px;font-weight: 600;margin-left:40px;">ASSIGNED TASK</div>
+</div>
+<div class="content-wrapper ">
+    <div class="row mt-3 ">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 w-100">
+          <div class="card">
+            <div class="card-body">
+                <form action="" method="post">
+                    {% csrf_token %}
+                      <div class="row pt-1">
+                        <div class="col-md-4">
+                        <div class="text-light mr-2 ml-3 mt-2">NAME</div>
+                        </div>
+                        <div class="col-md-8 ">
+                         <input type="text" class="drop form-control ml-3 mt-2" required>
+                       </div>
+                      </div>
+                      <div class="row pt-1">
+                        <div class="col-md-4">
+                        <div class="text-light mr-2 ml-3 mt-2">PROJECT TITLE</div>
+                        </div>
+                        <div class="col-md-8 ">
+                         <input type="text" class="drop form-control ml-3 mt-2" required>
+                       </div>
+                      </div>
+                      <div class="row pt-1">
+                        <div class="col-md-4">
+                        <div class="text-light mr-2 ml-3 mt-2">DATE</div>
+                        </div>
+                        <div class="col-md-8 ">
+                         <input type="date" class="drop form-control ml-3 mt-2" required>
+                       </div>
+                      </div>
+                      <div class="row pt-1">
+                        <div class="col-md-4">
+                        <div class="text-light mr-2 ml-3 mt-2">DUE DATE</div>
+                        </div>
+                        <div class="col-md-8 ">
+                         <input type="date" class="drop form-control ml-3 mt-2" required>
+                       </div>
+                      </div>
+                      <div class="row pt-1">
+                        <div class="col-md-4">
+                        <div class="text-light mr-2 ml-3 mt-2">ADD SCREENSHOT</div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <input type="file"  class="form-control mt-2 " style="text-decoration:none;border:none;background-color: #191c24;" >
+                       </div>
+                      </div>
+                      <div class="row pt-1">
+                        <div class="col-md-4">
+                        <div class="text-light mr-2 ml-3 mt-2">DESCRIPTION</div>
+                        </div>
+                        <div class="col-md-8 ">
+                          <textarea style="color: #ffffff;width: 100%;height: 4cm;" name="description" required></textarea>
+                       </div>
+                      </div>
+                      <div class=" row  mt-3 ">
+                        <div class="col-md-4"></div>
+                         <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4 "><button type="submit" id="alert2" class="btn btn-primary ml-5" >SUBMIT</button></div>
+                         <div>
+                </form>
+            </div>
+          </div> 
+          </div> 
+          <div class="col-md-2"></div>   
+    </div> 
     </div>
-      <div class="col">
-          <div class="row">
-            <label>DESCRIPTION</label><br>
-        <textarea style="color: #ffffff;width: 500px;height: 4cm;" name="description" required></textarea>
-      </div></div>
-      <div class="col">
-          <div class="row" style="font-size: 20px;padding-top: 1cm">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary Search" style="width: 4cm">SUBMIT</button>
-          </div>
-      </div>
-    
-            <input type="hidden" id="leavId" name="team_id" value={{hrassignedtasks.id}}>
-    
-       </form>
-   </div>
-  
-
 {% endblock %}

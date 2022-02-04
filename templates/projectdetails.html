@@ -1,137 +1,102 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
+
 <div class="row ">
-    <div class="col-12 grid-margin">
+  <div class=" ml-6  text-light" style="font-size: 20px;font-weight: 600; margin-top: 3%;">PROJECTS</div></div>
+    <div class="col-12  grid-margin">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Order Status</h4>
+          <!-- <h4 class="card-title">Order Status</h4> -->
+          <div class="col-md-4 w-25">
+          <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          </div>
           <div class="table-responsive">
             <table class="table">
               <thead>
                 <tr>
-                  <th>
-                    <div class="form-check form-check-muted m-0">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">
-                      </label>
-                    </div>
-                  </th>
-                  <th> Client Name </th>
-                  <th> Order No </th>
-                  <th> Product Cost </th>
-                  <th> Project </th>
-                  <th> Payment Mode </th>
-                  <th> Start Date </th>
-                  <th> Payment Status </th>
+                  
+                  <th scope="col" class="text-light">Task name</th>
+                        <th scope="col" class="text-light">AssignedTo</th>
+                        <th scope="col" class="text-light">Test Status</th>
+                        <th scope="col" class="text-light">Report Status</th>
+                        <th scope="col" class="text-light">Project Details</th>
+                        <th scope="col" class="text-light">Date</th>
+                  
+                  
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  
                   <td>
-                    <div class="form-check form-check-muted m-0">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">
-                      </label>
-                    </div>
+                    <!-- <img src="{% static '/assets/images/faces/face1.jpg' %}" alt="image" /> -->
+                    <span class="ps-2">configure projects</span>
                   </td>
-                  <td>
-                    <img src="{% static '/assets/images/faces/face1.jpg' %}" alt="image" />
-                    <span class="ps-2">Henry Klein</span>
-                  </td>
-                  <td> 02312 </td>
-                  <td> $14,500 </td>
-                  <td> Dashboard </td>
-                  <td> Credit card </td>
+                  <td> AMAL CS </td>
+                  <td class="text-primary"><a href="#" style="text-decoration: underline;">Task Status</a> </td>
+                      <td class="text-primary"><a href="#" style="text-decoration: underline;">Tester Status</a></td>
+                      <td>
+                        <div class="progress" data-toggle="modal" data-target="" style="border-radius:5px;height:20px;background-color:#C2F0EB">
+                         <div class="progress-bar" style="width:30%;height:20px;">30%</div>
+                     </div>
+                    </td>
                   <td> 04 Dec 2019 </td>
-                  <td>
-                    <div class="badge badge-outline-success">Approved</div>
-                  </td>
+                  
                 </tr>
                 <tr>
+                 
                   <td>
-                    <div class="form-check form-check-muted m-0">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">
-                      </label>
-                    </div>
+                    <!-- <img src="{% static '/assets/images/faces/face2.jpg' %}" alt="image" /> -->
+                    <span class="ps-2">project section made responsive
+                    </span>
                   </td>
+                  <td> maria susan abhraham </td>
+                  <td class="text-primary"><a href="#" style="text-decoration: underline;">Test Status</a> </td>
+                  <td class="text-primary"><a href="#" style="text-decoration: underline;">Report Status</a></td>
                   <td>
-                    <img src="{% static '/assets/images/faces/face2.jpg' %}" alt="image" />
-                    <span class="ps-2">Estella Bryan</span>
-                  </td>
-                  <td> 02312 </td>
-                  <td> $14,500 </td>
-                  <td> Website </td>
-                  <td> Cash on delivered </td>
-                  <td> 04 Dec 2019 </td>
-                  <td>
-                    <div class="badge badge-outline-warning">Pending</div>
-                  </td>
+                    <div class="progress" data-toggle="modal" data-target="" style="border-radius:5px;height:20px;background-color:#C2F0EB">
+                     <div class="progress-bar" style="width:45%;height:20px;">45%</div>
+                 </div>
+                </td>
+                  <td> 03 NOV 2022 </td>
+                 
                 </tr>
                 <tr>
+                 
                   <td>
-                    <div class="form-check form-check-muted m-0">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">
-                      </label>
-                    </div>
+                    <!-- <img src="{% static '/assets/images/faces/face5.jpg' %}" alt="image" /> -->
+                    <span class="ps-2">extracted</span>
                   </td>
+                  <td> Jithin </td>
+                  <td class="text-primary"><a href="#" style="text-decoration: underline;">Test Status</a> </td>
+                  <td class="text-primary"><a href="#" style="text-decoration: underline;">Report Status</a></td>
                   <td>
-                    <img src="{% static '/assets/images/faces/face5.jpg' %}" alt="image" />
-                    <span class="ps-2">Lucy Abbott</span>
-                  </td>
-                  <td> 02312 </td>
-                  <td> $14,500 </td>
-                  <td> App design </td>
-                  <td> Credit card </td>
-                  <td> 04 Dec 2019 </td>
-                  <td>
-                    <div class="badge badge-outline-danger">Rejected</div>
-                  </td>
+                    <div class="progress" data-toggle="modal" data-target="" style="border-radius:5px;height:20px;background-color:#C2F0EB">
+                     <div class="progress-bar" style="width:69%;height:20px;">69%</div>
+                 </div>
+                </td>
+                  <td> 19 janu 2022 </td>
+                 
                 </tr>
                 <tr>
+                  
                   <td>
-                    <div class="form-check form-check-muted m-0">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <img src="{% static '/assets/images/faces/face3.jpg' %}" alt="image" />
+                    <!-- <img src="{% static '/assets/images/faces/face3.jpg' %}" alt="image" /> -->
                     <span class="ps-2">Peter Gill</span>
                   </td>
-                  <td> 02312 </td>
-                  <td> $14,500 </td>
-                  <td> Development </td>
-                  <td> Online Payment </td>
-                  <td> 04 Dec 2019 </td>
-                  <td>
-                    <div class="badge badge-outline-success">Approved</div>
-                  </td>
+                  <td> Sarath </td>
+                  <td class="text-primary"><a href="#" style="text-decoration: underline;">Test Status</a> </td>
+                      <td class="text-primary"><a href="#" style="text-decoration: underline;">Report Status</a></td>
+                      <td>
+                        <div class="progress" data-toggle="modal" data-target="" style="border-radius:5px;height:20px;background-color:#C2F0EB">
+                         <div class="progress-bar" style="width:80%;height:20px;">80%</div>
+                     </div>
+                    </td>
+                  <td> 19 feb 2022 </td>
+                  
                 </tr>
-                <tr>
-                  <td>
-                    <div class="form-check form-check-muted m-0">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <img src="{% static '/assets/images/faces/face4.jpg' %}" alt="image" />
-                    <span class="ps-2">Sallie Reyes</span>
-                  </td>
-                  <td> 02312 </td>
-                  <td> $14,500 </td>
-                  <td> Website </td>
-                  <td> Credit card </td>
-                  <td> 04 Dec 2019 </td>
-                  <td>
-                    <div class="badge badge-outline-success">Approved</div>
-                  </td>
-                </tr>
+               
               </tbody>
             </table>
           </div>
